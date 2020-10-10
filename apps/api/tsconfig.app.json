@@ -3,9 +3,10 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "types": ["node"],
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
-    "target": "es2015"
+    "target": "es2017"
   },
-  "exclude": ["**/*.spec.ts"],
+  "exclude": ["**/*.spec.ts", "src/mocks"],
   "include": ["**/*.ts"]
 }

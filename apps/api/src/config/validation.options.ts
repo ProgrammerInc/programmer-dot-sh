@@ -1,0 +1,4 @@
+export const DEFAULT_VALIDATIONS = {
+  URL_MAX_LENGTH: 2048,
+  URL_MIN_LENGTH: 3,
+};
