@@ -23,7 +23,8 @@
           "build",
           "test",
           "lint",
-          "e2e"
+          "e2e",
+          "compodoc"
         ],
         "canTrackAnalytics": false,
         "showUsageWarnings": true

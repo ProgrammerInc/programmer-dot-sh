@@ -48,6 +48,19 @@
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "compodoc": {
+          "builder": "@twittwer/compodoc:compodoc",
+          "options": {
+            "name": "\"<programmer>._ API Documentation\"",
+            "tsConfig": "apps/api/tsconfig.app.json",
+            "outputPath": "apps/api/docs"
+          },
+          "configurations": {
+            "json": {
+              "exportFormat": "json"
+            }
+          }
         }
       }
     }
