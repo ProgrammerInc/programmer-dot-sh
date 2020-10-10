@@ -44,7 +44,7 @@ export class FeedResolver {
     return this.feedService.update(updateFeedInput.id, updateFeedInput);
   }
 
-  @Mutation(() => Feed)
+  @Mutation(() => Boolean)
   removeFeed(@Args('id') id: string): Promise<boolean> {
     this.logger.verbose(`Deleting Feed by ID: ${id}`);
 

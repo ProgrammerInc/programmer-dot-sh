@@ -145,11 +145,11 @@ type Mutation {
   createFeed(feed: CreateFeedInput!): Feed!
   createKeyword(keyword: CreateKeywordInput!): Keyword!
   createLink(link: CreateLinkInput!): Link!
-  removeArticle(id: String!): Article!
-  removeCategory(id: String!): Category!
-  removeFeed(id: String!): Feed!
-  removeKeyword(id: String!): Keyword!
-  removeLink(id: String!): Link!
+  removeArticle(id: String!): Boolean!
+  removeCategory(id: String!): Boolean!
+  removeFeed(id: String!): Boolean!
+  removeKeyword(id: String!): Boolean!
+  removeLink(id: String!): Boolean!
   updateArticle(article: UpdateArticleInput!): Article!
   updateCategory(category: UpdateCategoryInput!): Category!
   updateFeed(feed: UpdateFeedInput!): Feed!

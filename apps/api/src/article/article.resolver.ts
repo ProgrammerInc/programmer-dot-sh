@@ -49,7 +49,7 @@ export class ArticleResolver {
     return this.articleService.update(updateArticleInput.id, updateArticleInput);
   }
 
-  @Mutation(() => Article)
+  @Mutation(() => Boolean)
   removeArticle(@Args('id') id: string): Promise<boolean> {
     this.logger.verbose(`Deleting Article by ID: ${id}`);
 

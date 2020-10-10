@@ -44,7 +44,7 @@ export class KeywordResolver {
     return this.keywordService.update(updateKeywordInput.id, updateKeywordInput);
   }
 
-  @Mutation(() => Keyword)
+  @Mutation(() => Boolean)
   removeKeyword(@Args('id') id: string): Promise<any> {
     this.logger.verbose(`Deleting Keyword by ID: ${id}`);
 

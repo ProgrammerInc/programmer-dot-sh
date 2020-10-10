@@ -40,7 +40,7 @@ async function bootstrap() {
   const enableCsurf = configService.get<boolean>('ENABLE_CSURF');
 
   if (enableCsurf) {
-    app.use(csurf());
+    app.use(csurf({ cookie: true }));
   }
 
   const enableHelmet = configService.get<boolean>('ENABLE_HELMET');

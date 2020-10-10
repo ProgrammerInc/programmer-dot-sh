@@ -50,7 +50,7 @@ export class CategoryResolver {
     return this.categoryService.update(updateCategoryInput.id, updateCategoryInput);
   }
 
-  @Mutation(() => Category)
+  @Mutation(() => Boolean)
   removeCategory(@Args('id') id: string): Promise<boolean> {
     this.logger.verbose(`Deleting Category by ID: ${id}`);
 

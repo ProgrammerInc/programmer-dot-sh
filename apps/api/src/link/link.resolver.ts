@@ -43,7 +43,7 @@ export class LinkResolver {
     return this.linkService.update(updateLinkInput.id, updateLinkInput);
   }
 
-  @Mutation(() => Link)
+  @Mutation(() => Boolean)
   removeLink(@Args('id') id: string): Promise<boolean> {
     this.logger.verbose(`Deleting Link by ID: ${id}`);
 
