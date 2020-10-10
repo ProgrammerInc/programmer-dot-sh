@@ -1,7 +1,22 @@
 {
-  "name": "programmer",
-  "version": "0.0.0",
+  "name": "@programmerinc/programmer-dot-sh",
+  "description": "<programmer>._ #monorepo project",
+  "private": true,
+  "version": "0.0.1",
+  "author": {
+    "name": "Programmer Incorporated",
+    "email": "programmer.incorporated@gmail.com",
+    "url": "https://programmer.inc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammerInc/programmer-inc.git"
+  },
   "license": "MIT",
+  "homepage": "https://programmer.sh",
+  "bugs": {
+    "url": "https://github.com/ProgrammerInc/programmer-inc/issues"
+  },
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
@@ -25,7 +40,6 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help"
   },
-  "private": true,
   "dependencies": {
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
