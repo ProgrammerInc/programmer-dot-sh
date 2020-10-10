@@ -11,4 +11,14 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/apps/api',
+  "reporters": [
+    "default",
+    [
+      "jest-html-reporter",
+      {
+        "pageTitle": "<programmer>._ API Test Report",
+        "outputPath": "../../coverage/apps/api/index.html"
+      }
+    ]
+  ]
 };

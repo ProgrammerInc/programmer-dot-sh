@@ -5,7 +5,7 @@
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
-    "target": "es2017"
+    "target": "es2015"
   },
   "exclude": ["**/*.spec.ts", "src/mocks"],
   "include": ["**/*.ts"]
