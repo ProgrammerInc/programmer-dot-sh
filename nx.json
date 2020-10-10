@@ -19,13 +19,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "Yzk5NGE3YTctMGI2Ny00NGIyLWEzMjYtODRjMGUwNTNlOTNhfHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e",
-          "compodoc"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e", "compodoc"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
@@ -34,6 +28,13 @@
   "projects": {
     "api": {
       "tags": []
+    },
+    "programmer-dot-sh": {
+      "tags": []
+    },
+    "programmer-dot-sh-e2e": {
+      "tags": [],
+      "implicitDependencies": ["programmer-dot-sh"]
     }
   }
 }
