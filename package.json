@@ -41,6 +41,8 @@
     "docs": "npm-run-all docs:api",
     "docs:api": "compodoc -p apps/api/tsconfig.app.json -d apps/api/docs -n \"<programmer>._ API Documentation\"",
     "docs:api:serve": "compodoc -p apps/api/tsconfig.app.json -d apps/api/docs -n \"<programmer>._ API Documentation\" -s",
+    "docs:worker": "compodoc -p apps/worker/tsconfig.app.json -d apps/worker/docs -n \"<programmer>._ Worker Documentation\"",
+    "docs:worker:serve": "compodoc -p apps/worker/tsconfig.app.json -d apps/worker/docs -n \"<programmer>._ Worker Documentation\" -s",
     "npm:check": "npm-check --skip-unused",
     "npm:update": "npm-check --update --skip-unused",
     "update": "nx migrate latest",

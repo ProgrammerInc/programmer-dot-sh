@@ -14,7 +14,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -39,7 +41,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/api/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/api/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -102,7 +106,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/programmer-dot-sh/**/*.{ts,tsx}"]
+            "lintFilePatterns": [
+              "apps/programmer-dot-sh/**/*.{ts,tsx}"
+            ]
           }
         },
         "test": {
@@ -135,7 +141,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/programmer-dot-sh-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/programmer-dot-sh-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -153,7 +161,9 @@
             "outputPath": "dist/apps/worker",
             "main": "apps/worker/src/main.ts",
             "tsConfig": "apps/worker/tsconfig.app.json",
-            "assets": ["apps/worker/src/assets"]
+            "assets": [
+              "apps/worker/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -178,7 +188,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/worker/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/worker/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -186,6 +198,19 @@
           "options": {
             "jestConfig": "apps/worker/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "compodoc": {
+          "builder": "@twittwer/compodoc:compodoc",
+          "options": {
+            "name": "\"<programmer>._ Worker Documentation\"",
+            "tsConfig": "apps/worker/tsconfig.app.json",
+            "outputPath": "apps/worker/docs"
+          },
+          "configurations": {
+            "json": {
+              "exportFormat": "json"
+            }
           }
         }
       }
@@ -199,7 +224,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/models/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/models/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -220,7 +247,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/dtos/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/dtos/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -241,7 +270,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/enums/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/enums/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -262,7 +293,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/config/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/config/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -283,7 +316,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/mocks/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/mocks/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -304,7 +339,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/health/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/health/**/*.ts"
+            ]
           }
         },
         "test": {
