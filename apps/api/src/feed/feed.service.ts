@@ -1,13 +1,10 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
+import { CreateFeedInput, UpdateFeedInput } from '@programmer/dtos';
+import { Article, Category, Feed } from '@programmer/models';
 import { Ref, ReturnModelType } from '@typegoose/typegoose';
 import { ObjectId } from 'bson';
 import { InjectModel } from 'nestjs-typegoose';
-import { Article } from '../article/models/article.model';
-import { Category } from '../category/models/category.model';
-import { CreateFeedInput } from './dto/create-feed.input';
-import { UpdateFeedInput } from './dto/update-feed.input';
-import { Feed } from './models/feed.model';
 
 @Injectable()
 export class FeedService {

@@ -1,16 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { CreateArticleInput, UpdateArticleInput } from '@programmer/dtos';
+import { mockArticle, mockCategory, mockFeed, mockKeyword } from '@programmer/mocks';
+import { Article, Category, Feed, Keyword } from '@programmer/models';
 import { getModelToken } from 'nestjs-typegoose';
-import { Category } from '../category/models/category.model';
-import { Feed } from '../feed/models/feed.model';
-import { Keyword } from '../keyword/models/keyword.model';
-import { mockArticle } from '../mocks/article.mock';
-import { mockCategory } from '../mocks/category.mock';
-import { mockFeed } from '../mocks/feed.mock';
-import { mockKeyword } from '../mocks/keyword.mock';
 import { ArticleService } from './article.service';
-import { CreateArticleInput } from './dto/create-article.input';
-import { UpdateArticleInput } from './dto/update-article.input';
-import { Article } from './models/article.model';
 
 describe('ArticleService', () => {
   let articleService: ArticleService;

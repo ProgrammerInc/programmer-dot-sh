@@ -1,14 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
+import { DATABASE_CONNECTION, redisOptions } from '@programmer/config';
+import { Article, Category, Feed, Keyword } from '@programmer/models';
 import { TypegooseModule } from 'nestjs-typegoose';
-import { Category } from '../category/models/category.model';
-import { DATABASE_CONNECTION } from '../config/constants.options';
-import { redisOptions } from '../config/redis.options';
-import { Feed } from '../feed/models/feed.model';
-import { Keyword } from '../keyword/models/keyword.model';
 import { ArticleResolver } from './article.resolver';
 import { ArticleService } from './article.service';
-import { Article } from './models/article.model';
 
 @Module({
   imports: [

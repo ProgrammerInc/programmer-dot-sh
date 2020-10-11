@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
+import { DATABASE_CONNECTION } from '@programmer/config';
+import { Category, Keyword } from '@programmer/models';
 import { TypegooseModule } from 'nestjs-typegoose';
-import { Category } from '../category/models/category.model';
-import { DATABASE_CONNECTION } from '../config/constants.options';
 import { KeywordResolver } from './keyword.resolver';
 import { KeywordService } from './keyword.service';
-import { Keyword } from './models/keyword.model';
 
 @Module({
   imports: [

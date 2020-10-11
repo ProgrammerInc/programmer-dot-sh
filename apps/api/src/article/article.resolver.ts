@@ -1,14 +1,10 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { Args, Mutation, Parent, Query, ResolveField, Resolver } from '@nestjs/graphql';
+import { CreateArticleInput, UpdateArticleInput } from '@programmer/dtos';
+import { Article, Category, Feed, Keyword } from '@programmer/models';
 import { Ref } from '@typegoose/typegoose';
 import { ObjectId } from 'bson';
-import { Category } from '../category/models/category.model';
-import { Feed } from '../feed/models/feed.model';
-import { Keyword } from '../keyword/models/keyword.model';
 import { ArticleService } from './article.service';
-import { CreateArticleInput } from './dto/create-article.input';
-import { UpdateArticleInput } from './dto/update-article.input';
-import { Article } from './models/article.model';
 
 @Resolver(() => Article)
 export class ArticleResolver {

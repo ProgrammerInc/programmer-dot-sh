@@ -27,14 +27,37 @@
   },
   "projects": {
     "api": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["worker"]
     },
     "programmer-dot-sh": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["api"]
     },
     "programmer-dot-sh-e2e": {
       "tags": [],
       "implicitDependencies": ["programmer-dot-sh"]
+    },
+    "worker": {
+      "tags": []
+    },
+    "models": {
+      "tags": []
+    },
+    "dtos": {
+      "tags": []
+    },
+    "enums": {
+      "tags": []
+    },
+    "config": {
+      "tags": []
+    },
+    "mocks": {
+      "tags": []
+    },
+    "health": {
+      "tags": []
     }
   }
 }

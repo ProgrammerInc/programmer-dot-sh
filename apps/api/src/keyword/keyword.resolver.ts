@@ -1,9 +1,8 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { CreateKeywordInput } from './dto/create-keyword.input';
-import { UpdateKeywordInput } from './dto/update-keyword.input';
+import { CreateKeywordInput, UpdateKeywordInput } from '@programmer/dtos';
+import { Keyword } from '@programmer/models';
 import { KeywordService } from './keyword.service';
-import { Keyword } from './models/keyword.model';
 
 @Resolver(() => Keyword)
 export class KeywordResolver {

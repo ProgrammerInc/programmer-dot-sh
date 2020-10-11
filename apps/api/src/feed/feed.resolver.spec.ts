@@ -1,16 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { CreateFeedInput, UpdateFeedInput } from '@programmer/dtos';
+import { FeedType } from '@programmer/enums';
+import { mockArticle, mockCategory, mockFeed } from '@programmer/mocks';
+import { Article, Category, Feed } from '@programmer/models';
 import { getModelToken } from 'nestjs-typegoose';
-import { Article } from '../article/models/article.model';
-import { Category } from '../category/models/category.model';
-import { mockArticle } from '../mocks/article.mock';
-import { mockCategory } from '../mocks/category.mock';
-import { mockFeed } from '../mocks/feed.mock';
-import { CreateFeedInput } from './dto/create-feed.input';
-import { UpdateFeedInput } from './dto/update-feed.input';
-import { FeedType } from './enums/feed-type.enum';
 import { FeedResolver } from './feed.resolver';
 import { FeedService } from './feed.service';
-import { Feed } from './models/feed.model';
 
 describe('FeedResolver', () => {
   let feedResolver: FeedResolver;

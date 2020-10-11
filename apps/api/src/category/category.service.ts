@@ -1,14 +1,9 @@
 import { Injectable, Logger } from '@nestjs/common';
+import { CreateCategoryInput, UpdateCategoryInput } from '@programmer/dtos';
+import { Article, Category, Feed, Keyword, Link } from '@programmer/models';
 import { Ref, ReturnModelType } from '@typegoose/typegoose';
 import { ObjectId } from 'bson';
 import { InjectModel } from 'nestjs-typegoose';
-import { Article } from '../article/models/article.model';
-import { Category } from './models/category.model';
-import { Feed } from '../feed/models/feed.model';
-import { Keyword } from '../keyword/models/keyword.model';
-import { Link } from '../link/models/link.model';
-import { CreateCategoryInput } from './dto/create-category.input';
-import { UpdateCategoryInput } from './dto/update-category.input';
 
 @Injectable()
 export class CategoryService {

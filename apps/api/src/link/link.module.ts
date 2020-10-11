@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
+import { DATABASE_CONNECTION } from '@programmer/config';
+import { Category, Link } from '@programmer/models';
 import { TypegooseModule } from 'nestjs-typegoose';
-import { Category } from '../category/models/category.model';
-import { DATABASE_CONNECTION } from '../config/constants.options';
 import { LinkResolver } from './link.resolver';
 import { LinkService } from './link.service';
-import { Link } from './models/link.model';
 
 @Module({
   imports: [

@@ -1,9 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
+import { CreateKeywordInput, UpdateKeywordInput } from '@programmer/dtos';
+import { Keyword } from '@programmer/models';
 import { ReturnModelType } from '@typegoose/typegoose';
 import { InjectModel } from 'nestjs-typegoose';
-import { CreateKeywordInput } from './dto/create-keyword.input';
-import { UpdateKeywordInput } from './dto/update-keyword.input';
-import { Keyword } from './models/keyword.model';
 
 @Injectable()
 export class KeywordService {

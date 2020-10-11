@@ -1,11 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { CreateKeywordInput, UpdateKeywordInput } from '@programmer/dtos';
+import { mockKeyword } from '@programmer/mocks';
+import { Keyword } from '@programmer/models';
 import { getModelToken } from 'nestjs-typegoose';
-import { mockKeyword } from '../mocks/keyword.mock';
-import { CreateKeywordInput } from './dto/create-keyword.input';
-import { UpdateKeywordInput } from './dto/update-keyword.input';
 import { KeywordResolver } from './keyword.resolver';
 import { KeywordService } from './keyword.service';
-import { Keyword } from './models/keyword.model';
 
 describe('KeywordResolver', () => {
   let keywordResolver: KeywordResolver;

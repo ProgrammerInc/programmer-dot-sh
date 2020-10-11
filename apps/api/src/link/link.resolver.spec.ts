@@ -1,13 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { CreateLinkInput, UpdateLinkInput } from '@programmer/dtos';
+import { mockCategory, mockLink } from '@programmer/mocks';
+import { Category, Link } from '@programmer/models';
 import { getModelToken } from 'nestjs-typegoose';
-import { Category } from '../category/models/category.model';
-import { mockCategory } from '../mocks/category.mock';
-import { mockLink } from '../mocks/link.mock';
-import { CreateLinkInput } from './dto/create-link.input';
-import { UpdateLinkInput } from './dto/update-link.input';
 import { LinkResolver } from './link.resolver';
 import { LinkService } from './link.service';
-import { Link } from './models/link.model';
 
 describe('LinkResolver', () => {
   let linkResolver: LinkResolver;

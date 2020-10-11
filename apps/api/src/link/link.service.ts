@@ -1,12 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
+import { CreateLinkInput, UpdateLinkInput } from '@programmer/dtos';
+import { Category, Link } from '@programmer/models';
 import { Ref, ReturnModelType } from '@typegoose/typegoose';
 import { ObjectId } from 'bson';
 import { nanoid } from 'nanoid';
 import { InjectModel } from 'nestjs-typegoose';
-import { Category } from '../category/models/category.model';
-import { CreateLinkInput } from './dto/create-link.input';
-import { UpdateLinkInput } from './dto/update-link.input';
-import { Link } from './models/link.model';
 
 @Injectable()
 export class LinkService {

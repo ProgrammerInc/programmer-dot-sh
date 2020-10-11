@@ -1,12 +1,10 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { Args, Mutation, Parent, Query, ResolveField, Resolver } from '@nestjs/graphql';
+import { CreateLinkInput, UpdateLinkInput } from '@programmer/dtos';
+import { Category, Link } from '@programmer/models';
 import { Ref } from '@typegoose/typegoose';
 import { ObjectId } from 'bson';
-import { Category } from '../category/models/category.model';
-import { CreateLinkInput } from './dto/create-link.input';
-import { UpdateLinkInput } from './dto/update-link.input';
 import { LinkService } from './link.service';
-import { Link } from './models/link.model';
 
 @Resolver(() => Link)
 export class LinkResolver {
