@@ -1,4 +1,4 @@
-# Programmer
+# &lt;programmer&gt;.\_ #monorepo project
 
 This project was generated using [Nx](https://nx.dev).
 
