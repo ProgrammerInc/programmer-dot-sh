@@ -21,7 +21,7 @@ export class UpdateFeedInput extends PartialType(CreateFeedInput) {
   @IsString()
   id?: string;
 
-  @Field()
+  @Field({ nullable: true })
   @IsOptional()
   @IsNotEmpty()
   @IsString()

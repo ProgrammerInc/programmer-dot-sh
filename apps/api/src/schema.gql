@@ -75,7 +75,7 @@ input CreateFeedInput {
   path: String
   published: Boolean = true
   publisher: String
-  title: String!
+  title: String
   url: String!
 }
 
@@ -210,7 +210,7 @@ input UpdateFeedInput {
   path: String
   published: Boolean = true
   publisher: String
-  title: String!
+  title: String
   url: String!
 }
 

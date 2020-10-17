@@ -43,7 +43,7 @@ export class WorkerService {
   async feedCreated(data: any): Promise<void> {
     const parser = new Parser();
 
-    const { _id, url } = data;
+    const { id, url } = data;
 
     const response = await fetch(url);
 
@@ -77,9 +77,7 @@ export class WorkerService {
         published: true,
       });
 
-      await this.feedModel.findByIdAndUpdate(_id, newFeed, {
-        new: true,
-      });
+      await this.feedModel.findByIdAndUpdate(id, newFeed);
 
       feed.items.forEach(async (item) => {
         this.logger.debug({
@@ -105,7 +103,7 @@ export class WorkerService {
           guid: item.id,
           published: true,
           publishedAt: new Date(item.pubDate) || new Date(metadata.date),
-          feed: _id,
+          feed: id,
         });
         const newArticle = new this.articleModel(article);
         const createdArticle = await newArticle.save();

@@ -14,7 +14,8 @@ import {
 
 @InputType()
 export class CreateFeedInput {
-  @Field()
+  @Field({ nullable: true })
+  @IsOptional()
   @IsNotEmpty()
   @IsString()
   title?: string;

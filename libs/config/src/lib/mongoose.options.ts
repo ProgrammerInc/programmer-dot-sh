@@ -2,7 +2,7 @@ import { DATABASE_CONNECTION } from './constants.options';
 
 export const mongooseOptions = {
   useCreateIndex: true,
-  useFindAndModify: true,
+  useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
