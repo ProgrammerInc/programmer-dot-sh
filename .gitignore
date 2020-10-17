@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/**/schema.gql
 
 # Dependencies
 /node_modules

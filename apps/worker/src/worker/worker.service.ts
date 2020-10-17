@@ -43,7 +43,7 @@ export class WorkerService {
   async feedCreated(data: any): Promise<void> {
     const parser = new Parser();
 
-    const { id, url } = data;
+    const { _id, id, url } = data;
 
     const response = await fetch(url);
 
@@ -103,7 +103,7 @@ export class WorkerService {
           guid: item.id,
           published: true,
           publishedAt: new Date(item.pubDate) || new Date(metadata.date),
-          feed: id,
+          feed: _id,
         });
         const newArticle = new this.articleModel(article);
         const createdArticle = await newArticle.save();
