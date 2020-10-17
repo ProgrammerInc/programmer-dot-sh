@@ -1,5 +1,5 @@
 import { Field, InputType } from '@nestjs/graphql';
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
 @InputType()
 export class CreateKeywordInput {
@@ -9,6 +9,7 @@ export class CreateKeywordInput {
   name: string;
 
   @Field({ nullable: true })
+  @IsOptional()
   @IsString()
   tag?: string;
 }

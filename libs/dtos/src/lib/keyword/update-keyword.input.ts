@@ -1,6 +1,6 @@
 import { Field, InputType } from '@nestjs/graphql';
 import { PartialType } from '@nestjs/mapped-types';
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 import { CreateKeywordInput } from './create-keyword.input';
 
 @InputType()
@@ -11,11 +11,13 @@ export class UpdateKeywordInput extends PartialType(CreateKeywordInput) {
   id?: string;
 
   @Field({ nullable: false })
+  @IsOptional()
   @IsNotEmpty()
   @IsString()
   name?: string;
 
   @Field({ nullable: true })
+  @IsOptional()
   @IsString()
   tag?: string;
 }

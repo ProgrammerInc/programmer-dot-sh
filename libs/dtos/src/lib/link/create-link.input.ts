@@ -1,10 +1,19 @@
 import { Field, InputType } from '@nestjs/graphql';
-import { IsBoolean, IsNotEmpty, IsString, IsUrl, MaxLength, MinLength } from 'class-validator';
 import { DEFAULT_VALIDATIONS } from '@programmer/config';
+import {
+  IsBoolean,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+  IsUrl,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
 
 @InputType()
 export class CreateLinkInput {
   @Field()
+  @IsOptional()
   @IsString()
   path?: string;
 
@@ -17,11 +26,13 @@ export class CreateLinkInput {
   url: string;
 
   @Field({ defaultValue: true })
+  @IsOptional()
   @IsNotEmpty()
   @IsBoolean()
   published: boolean;
 
   @Field({ nullable: true })
+  @IsOptional()
   @IsString()
   category?: string;
 
