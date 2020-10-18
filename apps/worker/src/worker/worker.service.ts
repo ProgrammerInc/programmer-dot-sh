@@ -2,6 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { FeedType } from '@programmer/enums';
 import { Article, Feed } from '@programmer/models';
 import { ReturnModelType } from '@typegoose/typegoose';
+import { ObjectId } from 'bson';
 import metascraper from 'metascraper';
 import metaAuthor from 'metascraper-author';
 import metaClearbit from 'metascraper-clearbit';
@@ -43,7 +44,7 @@ export class WorkerService {
   async feedCreated(data: any): Promise<void> {
     const parser = new Parser();
 
-    const { _id, id, url } = data;
+    const { id, url } = data;
 
     const response = await fetch(url);
 
@@ -103,7 +104,7 @@ export class WorkerService {
           guid: item.id,
           published: true,
           publishedAt: new Date(item.pubDate) || new Date(metadata.date),
-          feed: _id,
+          feed: new ObjectId(id),
         });
         const newArticle = new this.articleModel(article);
         const createdArticle = await newArticle.save();
