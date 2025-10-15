@@ -92,10 +92,10 @@ export const setWallpaper = (id: string): void => {
     localStorage.setItem(WALLPAPER_STORAGE_KEY, id);
 
     // Dispatch custom event for components to respond to wallpaper change
-    const wallpaperChangeEvent: CustomEvent<WallpaperChangeEventDetail> = new CustomEvent(
+    const wallpaperChangeEvent = new CustomEvent(
       'wallpaperChange',
       {
-        detail: { wallpaperId: id, wallpaper: wallpaperPresets[id] }
+        detail: { wallpaperId: id, wallpaper: wallpaperPresets[id] as any }
       }
     );
     document.dispatchEvent(wallpaperChangeEvent);
@@ -150,7 +150,7 @@ const groupWallpapersByType = (): WallpapersByType => {
       if (!wallpapersByType[type]) {
         wallpapersByType[type] = [];
       }
-      wallpapersByType[type].push([id, wallpaper]);
+      wallpapersByType[type].push([id, wallpaper as any]);
     });
 
     return wallpapersByType;
@@ -305,10 +305,10 @@ export const debugBallpit = (): void => {
     localStorage.setItem(WALLPAPER_STORAGE_KEY, 'ballpit');
 
     // Dispatch custom event for components to respond to wallpaper change
-    const wallpaperChangeEvent: CustomEvent<WallpaperChangeEventDetail> = new CustomEvent(
+    const wallpaperChangeEvent = new CustomEvent(
       'wallpaperChange',
       {
-        detail: { wallpaperId: 'ballpit', wallpaper: wallpaperPresets.ballpit }
+        detail: { wallpaperId: 'ballpit', wallpaper: wallpaperPresets.ballpit as any }
       }
     );
     document.dispatchEvent(wallpaperChangeEvent);

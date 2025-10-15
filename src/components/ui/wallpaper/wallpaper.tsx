@@ -143,7 +143,7 @@ export const WallpaperProvider = forwardRef<HTMLDivElement, WallpaperProps>(
     const background = currentWallpaper.background;
     const backgroundStyles: React.CSSProperties = { ...style };
 
-    const { animation, colors, gradient, image, video } = background;
+    const { animation, colors, gradient, image, video } = background as any;
 
     // Debug logging for wallpaper selection
     useEffect(() => {
