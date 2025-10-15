@@ -42,7 +42,9 @@ export const fetchProjects = async (): Promise<Project[]> => {
       return projectsCache;
     }
 
-    const { data: projectsData, error: projectsError } = await supabase.from('projects').select(`
+    const { data: projectsData, error: projectsError } = await supabase
+      .from('projects')
+      .select(`
         id,
         project_key,
         title,
