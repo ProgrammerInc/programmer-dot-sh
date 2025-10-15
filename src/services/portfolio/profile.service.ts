@@ -44,10 +44,8 @@ export const fetchProfile = async (): Promise<Profile | null> => {
       return null;
     }
 
-    // Fetch all skill categories with their items
-    const { data: skillsData, error: skillsError } = await supabase
-      .from('skills')
-      .select(`
+    // Fetch all skill categories
+    const { data: skillsData, error: skillsError } = await supabase.from('skills').select(`
         id,
         category,
         skill_items (

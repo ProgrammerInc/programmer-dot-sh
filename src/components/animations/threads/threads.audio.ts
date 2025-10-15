@@ -190,7 +190,7 @@ export function useAudioAnalyzer(options: AudioAnalyzerOptions = {}) {
         if (!analyser || !dataArrayRef.current || !isAnalyzing) return;
 
         // Get frequency data
-        analyser.getByteFrequencyData(dataArrayRef.current as Uint8Array<ArrayBuffer>);
+        analyser.getByteFrequencyData(dataArrayRef.current);
         const dataArray = dataArrayRef.current;
 
         // Calculate frequency bands

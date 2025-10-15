@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import fs from 'fs';
 import path from 'path';
 import { defineConfig } from 'vite';
-import type { Wallpaper } from './src/components/ui/wallpaper/types';
+import { Wallpaper } from './src/components/ui/wallpaper';
 import wallpapers from './src/presets/wallpaper.presets';
 
 // Loop over page class names from files in src/pages

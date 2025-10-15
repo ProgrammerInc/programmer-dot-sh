@@ -1,6 +1,6 @@
 'use client';
 
-import type {
+import {
   AuroraBackgroundProps,
   AuroraCanvasProps,
   AuroraProps,

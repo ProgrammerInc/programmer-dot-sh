@@ -40,8 +40,7 @@ export const fetchExperience = async (): Promise<Experience[]> => {
       return experienceCache;
     }
 
-    const { data: experienceData, error: experienceError } = await supabase
-      .from('experiences')
+    const { data: experienceData, error: experienceError } = await supabase.from('experiences')
       .select(`
         id,
         company,

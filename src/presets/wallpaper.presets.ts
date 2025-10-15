@@ -1,5 +1,5 @@
 /* eslint-disable no-secrets/no-secrets */
-import type { Wallpaper } from '../components/ui/wallpaper/types';
+import { Wallpaper } from '@/components/ui/wallpaper';
 
 // Default placeholder image URL for animations requiring an image source
 const DEFAULT_ANIMATION_IMAGE_URL =
