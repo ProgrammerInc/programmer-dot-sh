@@ -78,6 +78,7 @@
     "html-react-parser": "^5.2.2",
     "input-otp": "^1.4.2",
     "lodash.isequal": "^4.5.0",
+    "lovable-tagger": "^1.1.11",
     "lucide-react": "^0.462.0",
     "matter-js": "^0.20.0",
     "meshline": "^3.3.1",

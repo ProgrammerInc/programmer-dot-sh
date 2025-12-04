@@ -312,7 +312,7 @@ const Index = () => {
         id="wallpaperContainer"
         className="wallpaper-container"
         ref={wallpaperRef}
-        wallpapers={wallpaperPresets}
+        wallpapers={wallpaperPresets as any}
         wallpaper={currentWallpaper}
       />
     ),
